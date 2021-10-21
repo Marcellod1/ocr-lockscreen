@@ -14,7 +14,7 @@ $(document).ready(function(){
     // Event listeners for canvas
     canvas.addEventListener('mousemove', draw);
     canvas.addEventListener('mousedown', update_mouse_pos);
-    //canvas.addEventListener('mousedown', setPosition);
+    canvas.addEventListener('mouseenter', update_mouse_pos);
 
     // Previous Mouse position
     var mouse_position = { x: 0, y: 0 };
@@ -42,7 +42,7 @@ $(document).ready(function(){
         ctx.lineTo(mouse_position.x, mouse_position.y); // to
 
         ctx.strokeStyle = "black";
-        ctx.lineWidth = 5;
+        ctx.lineWidth = 8;
         ctx.stroke();
     }
 });
