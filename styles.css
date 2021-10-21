@@ -1,0 +1,59 @@
+body {
+    background-color: #69F7BE;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Outlined text courtesy of https://stackoverflow.com/questions/4919076/outline-effect-to-text */
+.text-outlined {
+    color: white;
+    text-shadow: black 1px 1px 3px;
+    -webkit-font-smoothing: antialiased
+}
+
+.main-grid-container {
+    display: grid;
+    grid-template-areas:
+      'header header header'
+      'left main right'
+      'footer footer footer';
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+}
+
+.left {
+    grid-area: left;
+    padding: 5px;
+}
+
+.main {
+    grid-area: main;
+    padding: 10px;
+}
+
+.right {
+    grid-area: right;
+    padding: 5px;
+}
+
+.footer {
+    grid-area: footer;
+    padding: 5px;
+}
+
+
+#phone-container {
+    position: relative;
+    height: 800px;
+    width: 395px ;
+    background-image: url(resources/img/home-screen.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+
+
