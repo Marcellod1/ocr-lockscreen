@@ -11,42 +11,7 @@ body {
     -webkit-font-smoothing: antialiased
 }
 
-.main-grid-container {
-    display: grid;
-    grid-template-areas:
-      'header header header'
-      'left main right'
-      'footer footer footer';
-    text-align: center;
-}
-
-.header {
-    grid-area: header;
-}
-
-.left {
-    grid-area: left;
-    padding: 5px;
-}
-
-.main {
-    grid-area: main;
-    padding: 10px;
-}
-
-.right {
-    grid-area: right;
-    padding: 5px;
-}
-
-.footer {
-    grid-area: footer;
-    padding: 5px;
-}
-
-
 #phone-container {
-    position: relative;
     height: 800px;
     width: 395px ;
     background-image: url(resources/img/lock-screen.png);
@@ -54,16 +19,29 @@ body {
     background-repeat: no-repeat;
     margin: auto;
     text-align: center;
-    justify-content: center;
 }
 
-#can {
+
+
+
+
+#canvas {
+    display: inline-block;
     background: white; 
     border: 2px solid; 
     border-color: black; 
     cursor: crosshair;
-    margin-top: 350px;
+    margin: 300px 20px 10px 20px;
 }
 
+#submit-button {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+#reset-button {
+    display: inline-block;
+    margin: 5px 10px;
+}
 
 
