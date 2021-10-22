@@ -57,7 +57,13 @@ body {
     justify-content: center;
 }
 
-
+#can {
+    background: white; 
+    border: 2px solid; 
+    border-color: black; 
+    cursor: crosshair;
+    margin-top: 350px;
+}
 
 
 

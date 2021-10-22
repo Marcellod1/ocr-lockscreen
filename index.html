@@ -7,22 +7,22 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Include JQuery and tesseract CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
-    <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+    <!-- Include JQuery and handwriting scripts -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script type="text/javascript" src="scripts/handwriting.canvas.js"></script>
 </head>
 
 
 <body class="main-grid-container">
     <div class="main">
         <div id="phone-container">
+            <canvas id="can" width="300" height="300"></canvas>
         </div>
     </div>
 
     
     <!-- include custom javascript -->
-    <script src="scripts/canvas.js"></script>
-    <script src="scripts/ocr.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 
 </html>

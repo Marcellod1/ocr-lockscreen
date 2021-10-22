@@ -11,6 +11,10 @@ $(document).ready(function(){
     var bounding_rect = canvas.getBoundingClientRect();
     var ctx = canvas.getContext('2d');
 
+    // Line styling
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+
     // Event listeners for canvas
     canvas.addEventListener('mousemove', draw);
     canvas.addEventListener('mousedown', update_mouse_pos);
