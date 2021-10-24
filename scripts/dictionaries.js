@@ -15,18 +15,18 @@ var hiragana = {
 }
 
 var katagana = {
-"a":"ア" , "i":"イ" ,  "e":"エ", "o":"オ" , "u":"ウ",
-"ka":"カ" , "ki":"キ" ,  "ke":"ケ", "ko":"コ" , "ku":"ク",
-"sa":"サ" , "shi":"シ" ,  "se":"セ", "so":"ソ" , "su":"ス",
-"ta":"タ" , "chi":"チ" ,  "te":"テ", "to":"ト" , "tsu":"ツ",
-"na":"ナ" , "ni":"ニ" ,  "ne":"ネ", "no":"ノ" , "nu":"ヌ",
-"ha":"ハ" , "hi":"ヒ" ,  "he":"ヘ", "ho":"ホ" , "fu":"フ",
-"ma":"マ" , "mi":"ミ" ,  "me":"メ", "mo":"モ" , "mu":"ム",
-"ya":"ヤ", "yo":"ヨ" , "yu":"ユ",
-"ra":"ラ" , "ri":"リ" ,  "re":"レ", "ro":"ロ" , "ru":"ル",
-"wa":"ワ" , "wo":"ヲ",
-"n":"ン"
-}
+    "a":"ア" , "i":"イ" ,  "e":"エ", "o":"オ" , "u":"ウ",
+    "ka":"カ" , "ki":"キ" ,  "ke":"ケ", "ko":"コ" , "ku":"ク",
+    "sa":"サ" , "shi":"シ" ,  "se":"セ", "so":"ソ" , "su":"ス",
+    "ta":"タ" , "chi":"チ" ,  "te":"テ", "to":"ト" , "tsu":"ツ",
+    "na":"ナ" , "ni":"ニ" ,  "ne":"ネ", "no":"ノ" , "nu":"ヌ",
+    "ha":"ハ" , "hi":"ヒ" ,  "he":"ヘ", "ho":"ホ" , "fu":"フ",
+    "ma":"マ" , "mi":"ミ" ,  "me":"メ", "mo":"モ" , "mu":"ム",
+    "ya":"ヤ", "yo":"ヨ" , "yu":"ユ",
+    "ra":"ラ" , "ri":"リ" ,  "re":"レ", "ro":"ロ" , "ru":"ル",
+    "wa":"ワ" , "wo":"ヲ",
+    "n":"ン"
+    }
 
 var hiraTenTen = {
     "ga":"が" , "gi":"ぎ" ,  "ge":"げ", "go":"ご" , "gu":"ぐ",
@@ -42,4 +42,15 @@ var kataTenTen = {
     "da":"ダ" , "di":"ヂ" ,  "de":"デ", "do":"ド" , "du":"ヅ",
     "ba":"バ" , "bi":"ビ" ,  "be":"ベ", "bo":"ボ" , "bu":"ブ",
     "pa":"パ" , "pi":"ピ" ,  "pe":"ペ", "po":"ポ" , "pu":"プ"
+}
+
+
+function getRandomHiragana(){
+    const num_chars = Object.keys(hiragana).length;
+    const randomKey = Object.keys(hiragana)[Math.floor(num_chars * Math.random())];
+    
+    var ret_pair = {};
+    ret_pair[randomKey] = hiragana[randomKey];
+
+    return ret_pair;
 }
