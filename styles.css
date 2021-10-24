@@ -22,16 +22,13 @@ body {
 }
 
 
-
-
-
 #canvas {
     display: inline-block;
     background: white; 
     border: 2px solid; 
     border-color: black; 
     cursor: crosshair;
-    margin: 300px 20px 10px 20px;
+    margin: 10px 20px;
 }
 
 #submit-button {
@@ -43,6 +40,11 @@ body {
     display: inline-block;
     margin: 5px 10px;
     transform: scaleX(-1);
+}
+
+#prompt {
+    margin: 250px 10px 10px 10px;
+    display: inline-block;
 }
 
 
