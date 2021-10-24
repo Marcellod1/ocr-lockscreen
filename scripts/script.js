@@ -30,6 +30,9 @@ $(document).ready(function(){
                 console.log("Result: Correct");
             } else {
                 console.log("Result: Incorrect");
+                canvas.erase();
+                user_prompt = promptUser();
+                
             }
         }
     });
