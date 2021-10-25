@@ -70,13 +70,30 @@ body {
 
 #submit-button {
     display: inline-block;
-    margin: 5px 10px;
+    height: 50px;
+    width: 100px ;
+    background-image: url(resources/img/submit-button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
 }
 
 #reset-button {
     display: inline-block;
-    margin: 5px 10px;
-    transform: scaleX(-1);
+    height: 50px;
+    width: 100px ;
+    background-image: url(resources/img/reset-button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#erase-button {
+    display: inline-block;
+    height: 50px;
+    width: 100px ;
+    background-image: url(resources/img/erase-button.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #prompt {
