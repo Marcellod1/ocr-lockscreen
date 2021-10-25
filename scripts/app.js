@@ -58,14 +58,26 @@ $(document).ready(function(){
     // Updates the user facing promp DOM element with a new random prompt depending on the language config
     function promptUser(generator){
 
+        // Get the current state of the checkboxes from the DOM
         const hira = $("#hira-selector").prop('checked');
         const kata = $("#kata-selector").prop('checked');
         const tenten = $("#tenten-selector").prop('checked');
 
+        // Update the generator options with the current state of the checkboxes
         generator.updateIncludeAlphas(hira, kata, tenten);
-        const prompt = generator.generate();
+        const rand_char = generator.generate();
 
-        $("#prompt").text("Write " + prompt["alpha"] +  " \"" + Object.keys( prompt["char"])[0] + "\"")
-        return prompt;
+        // Decide on the value of the user's prompt based on the returned character  alphabet
+        var prompt_str = ""
+
+        if(rand_char["alpha"] == "hiragana" || rand_char["alpha"] == "hiraTenTen"){
+            prompt_str = "Write Hiragana \"" + Object.keys(rand_char["char"])[0] + "\""
+        } else{
+            prompt_str = "Write Katakana \"" + Object.keys(rand_char["char"])[0] + "\""
+        }
+
+        // Change the prompt element in the DOM
+        $("#prompt").text(prompt_str)
+        return rand_char;
     }
 });

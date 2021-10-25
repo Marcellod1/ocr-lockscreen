@@ -54,12 +54,9 @@ class CharacterGenerator {
     // Update the list of included alphabets from boolean inputs and handle any edge cases
     updateIncludeAlphas(hira, kata, tenten){
         this.includeAlphas = [];
-        if(!(hira || kata || tenten)){
+        if(!(hira || kata)){
             this.includeAlphas = ["hiragana"];
         }
-        else if(!hira && !kata && tenten){
-            this.includeAlphas = ["hiragana"];
-        } 
         else {
             if(hira){
                 this.includeAlphas.push("hiragana");
