@@ -14,15 +14,24 @@
 
 
 <body>
-
-    <div class="phone-container">
+    <div id="phone-app">
         <div id="phone-home-screen"></div>
         <div id="phone-lock-screen"></div>
-        <h1 id="prompt" class="text-outlined">Write "Wa"</h1>
+        <h2 id="prompt">Write "Wa"</h2>
         <canvas id="canvas" width="300" height="300"></canvas>
         <img id="reset-button" src="resources/img/submit.png" alt="reset">
         <img id="submit-button" src="resources/img/submit.png" alt="submit">
     </div>  
+
+
+    <div id="lang-config">
+        <input type="checkbox" id="hira-selector" name="Hiragana" value="Hirigana" checked="true">
+        <label for="vehicle1"> Hiragana </label><br>
+        <input type="checkbox" id="kata-selector" name="Katakana" value="Katakana" checked="true">
+        <label for="vehicle2"> Katakana </label><br>
+        <input type="checkbox" id="tenten-selector" name="Tenten" value="Tenten">
+        <label for="vehicle3"> Tenten</label><br> 
+    </div>
 
     <!-- include custom javascript -->
     <script type="text/javascript" src="scripts/dictionaries.js"></script>

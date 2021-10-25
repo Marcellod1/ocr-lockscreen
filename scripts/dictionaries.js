@@ -51,6 +51,5 @@ function getRandomHiragana(){
     
     var ret_pair = {};
     ret_pair[randomKey] = hiragana[randomKey];
-
     return ret_pair;
 }
