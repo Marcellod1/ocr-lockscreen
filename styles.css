@@ -2,6 +2,7 @@ body {
     background-color: #69F7BE;
     color: white;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
 
 /* Outlined text courtesy of https://stackoverflow.com/questions/4919076/outline-effect-to-text */
@@ -11,16 +12,39 @@ body {
     -webkit-font-smoothing: antialiased
 }
 
-#phone-container {
+.phone-container {
+    z-index: 0;
+    display: inline-block;
+    height: 800px;
+    width: 395px ;
+    background-image: url(resources/img/screen-border.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 10px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+#phone-lock-screen {
+    z-index: -1;
+    position: absolute;
+    transform: translateY(0);
     height: 800px;
     width: 395px ;
     background-image: url(resources/img/lock-screen.png);
     background-size: cover;
     background-repeat: no-repeat;
-    margin: auto;
-    text-align: center;
 }
 
+#phone-home-screen {
+    z-index: -2;
+    position: absolute;
+    height: 800px;
+    width: 395px ;
+    background-image: url(resources/img/home-screen.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 #canvas {
     display: inline-block;
