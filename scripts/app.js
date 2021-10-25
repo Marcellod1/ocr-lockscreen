@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
     // Get the initial prompt for the user
-    var user_prompt = promptUser();
+    let char_gen = new CharacterGenerator();
+    var user_prompt = promptUser(char_gen);
     
     // Create Canvas and set options
     var canvas = new handwriting.Canvas(document.getElementById("canvas"));
@@ -32,7 +33,7 @@ $(document).ready(function(){
             } else {
                 console.log("Result: Incorrect");
                 canvas.erase();
-                user_prompt = promptUser();
+                user_prompt = promptUser(char_gen);
             }
         }
     });
@@ -49,15 +50,22 @@ $(document).ready(function(){
     // Simple reset button event - erase canvas and get a new user prompt
     $("#reset-button").mousedown(function(e){
             canvas.erase();
-            user_prompt = promptUser();
+            user_prompt = promptUser(char_gen);
         }
     );
 
 
-    // Updates the user facing promp DOM element with the given string
-    function promptUser(){
-        user_prompt = getRandomHiragana();
-        $("#prompt").text("Write Hiragana \"" + Object.keys(user_prompt)[0] + "\"")
-        return user_prompt;
+    // Updates the user facing promp DOM element with a new random prompt depending on the language config
+    function promptUser(generator){
+
+        const hira = $("#hira-selector").prop('checked');
+        const kata = $("#kata-selector").prop('checked');
+        const tenten = $("#tenten-selector").prop('checked');
+
+        generator.updateIncludeAlphas(hira, kata, tenten);
+        const prompt = generator.generate();
+        
+        $("#prompt").text("Write " + prompt["alpha"] +  " \"" + Object.keys( prompt["char"])[0] + "\"")
+        return prompt;
     }
 });
