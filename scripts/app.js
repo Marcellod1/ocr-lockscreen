@@ -21,7 +21,7 @@ $(document).ready(function(){
     canvas.setCallBack(function(data, err) {
         if(err) throw err;
         else{
-            const prompt_char = Object.values(user_prompt)[0];
+            const prompt_char = user_prompt["char"][Object.keys(user_prompt["char"])[0]]; // this is nasty
             const written_char = data[0];
 
             console.log("Prompted:" + prompt_char);
@@ -64,7 +64,7 @@ $(document).ready(function(){
 
         generator.updateIncludeAlphas(hira, kata, tenten);
         const prompt = generator.generate();
-        
+
         $("#prompt").text("Write " + prompt["alpha"] +  " \"" + Object.keys( prompt["char"])[0] + "\"")
         return prompt;
     }

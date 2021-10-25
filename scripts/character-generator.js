@@ -1,6 +1,4 @@
 /* Dictionaries to prompt the user with a character and compare to their input */
-
-
 const dict = {
     hiragana : {
         "a":"あ" , "i":"い" ,  "e":"え", "o":"お" , "u":"う",
@@ -91,7 +89,6 @@ class CharacterGenerator {
         ret_char[randomKey] = dict[rand_alpha][randomKey];
 
         const ret_obj = { alpha: rand_alpha, char: ret_char };
-
         return ret_obj;
     }
 };
