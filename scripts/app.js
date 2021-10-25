@@ -41,18 +41,45 @@ $(document).ready(function(){
 
     // Simple submit button event - recognize user input and get a new user prompt
     $("#submit-button").mousedown(function(e){
-           /* NOTE: you can only really call this here since it is async. Any susbsequent calls here may not have the updated state from the recognize callback.
+           /* NOTE: you can only really call recognize here since it is async. Any susbsequent calls here may not have the updated state from the recognize callback.
             Try to put all program logic requiring the global state within the callback instead of in here */
-           canvas.recognize();
-        }
-    );
+            $("#submit-button").css("transform", "scale(0.85)");
+            canvas.recognize();
+            
+    });
+
+    // Mouse up event handler for the submit button - resets the image to normal scale
+    $("#submit-button").mouseup(function(e){
+            $("#submit-button").css("transform", "scale(1.0)");
+    });
+
 
     // Simple reset button event - erase canvas and get a new user prompt
     $("#reset-button").mousedown(function(e){
+            $("#reset-button").css("transform", "scale(0.85)");
             canvas.erase();
-            user_prompt = promptUser(char_gen);
-        }
-    );
+            user_prompt = promptUser(char_gen);        
+    });
+
+
+    // Mouse up event handler for the reset button - resets the image to normal scale
+    $("#reset-button").mouseup(function(e){
+            $("#reset-button").css("transform", "scale(1.0)");
+        
+    });
+
+
+    // Simple reset button event - erase canvas and keep the current prompt
+    $("#erase-button").mousedown(function(e){
+        $("#erase-button").css("transform", "scale(0.85)");
+        canvas.erase();
+    });
+
+    
+    // Mouse up event handler for the erase button - resets the image to normal scale
+    $("#erase-button").mouseup(function(e){
+        $("#erase-button").css("transform", "scale(1.0)");
+    });
 
 
     // Updates the user facing promp DOM element with a new random prompt depending on the language config

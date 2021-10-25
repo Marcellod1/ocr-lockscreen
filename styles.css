@@ -68,32 +68,27 @@ body {
     margin: 10px 20px;
 }
 
-#submit-button {
+
+.canvas-button {
     display: inline-block;
     height: 50px;
-    width: 100px ;
+    width: 100px;
+    transform: scale(1.0);
     background-image: url(resources/img/submit-button.png);
     background-size: cover;
     background-repeat: no-repeat;
+}
 
+#submit-button {
+    background-image: url(resources/img/submit-button.png);
 }
 
 #reset-button {
-    display: inline-block;
-    height: 50px;
-    width: 100px ;
     background-image: url(resources/img/reset-button.png);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #erase-button {
-    display: inline-block;
-    height: 50px;
-    width: 100px ;
     background-image: url(resources/img/erase-button.png);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 #prompt {
