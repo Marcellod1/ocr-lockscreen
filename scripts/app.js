@@ -29,11 +29,16 @@ $(document).ready(function(){
 
             if (prompt_char == written_char){
                 console.log("Result: Correct");
+                $("#correct").show();
                 // Unlock
             } else {
                 console.log("Result: Incorrect");
-                canvas.erase();
-                user_prompt = promptUser(char_gen);
+                $("#incorrect").show();
+                setTimeout(function () {
+                    $("#incorrect").hide();
+                    canvas.erase();
+                    user_prompt = promptUser(char_gen);
+                }, 1500);
             }
         }
     });
