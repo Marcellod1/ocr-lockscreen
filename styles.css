@@ -5,6 +5,21 @@ body {
     text-align: center;
 }
 
+/* Language Configuration */
+#lang-config {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    padding: 10px 10px 10px 10px;
+    margin: 20px;
+}
+
+#lang-config input{
+    margin: 10px 10px 10px 10px;
+}
+
+/* Phone screen styles */
 #phone-home-screen {
     position: relative;
     display: inline-block;
@@ -40,19 +55,7 @@ body {
     background-repeat: no-repeat;
 }
 
-
-#lang-config {
-    display: inline-block;
-    text-align: left;
-    vertical-align: top;
-    padding: 10px 10px 10px 10px;
-    margin: 20px;
-}
-
-#lang-config input{
-    margin: 10px 10px 10px 10px;
-}
-
+/* Canvas container */
 .canvas-button {
     grid-area: footer;
     height: 50px;
@@ -89,6 +92,8 @@ body {
     cursor: crosshair;
 }
 
+
+/* Buttons */
 #reset-button {
     grid-area: button1;
     background-image: url(resources/img/reset-button.png);
