@@ -55,6 +55,37 @@ body {
     background-repeat: no-repeat;
 }
 
+/* User feedback styles */
+#incorrect {
+    display: none;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    left: 100px;
+    top: 350px;
+    background-image: url(resources/img/incorrect.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#correct {
+    display: none;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    left: 100px;
+    top: 350px;
+    background-image: url(resources/img/correct.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
 /* Canvas container */
 .canvas-button {
     grid-area: footer;
@@ -91,7 +122,6 @@ body {
     border-color: black; 
     cursor: crosshair;
 }
-
 
 /* Buttons */
 #reset-button {
