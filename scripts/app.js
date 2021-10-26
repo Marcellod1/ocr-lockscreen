@@ -29,8 +29,10 @@ $(document).ready(function(){
 
             if (prompt_char == written_char){
                 console.log("Result: Correct");
-                $("#correct").show();
                 // Unlock
+                unlockPhone();
+                lockPhone();
+                
             } else {
                 console.log("Result: Incorrect");
                 $("#incorrect").show();
@@ -111,5 +113,25 @@ $(document).ready(function(){
         // Change the prompt element in the DOM
         $("#prompt").text(prompt_str)
         return rand_char;
+    }
+
+    // Play the unlock animation
+    function unlockPhone(){
+        console.log("unlocking...");
+        $("#phone-lock-screen").css("z-index", 1);
+        $("#phone-border").css("z-index", 2);
+        $("#phone-lock-screen").animate({bottom: '+=500px'});
+    }
+
+
+    // Play the lock animation
+    function lockPhone(){
+
+        console.log("locking...");
+        $("#phone-lock-screen").animate({bottom: '-=500px'});
+        $("#phone-lock-screen").css("z-index", 2);
+        $("#phone-border").css("z-index", 1);
+        canvas.erase();
+        user_prompt = promptUser(char_gen);        
     }
 });
