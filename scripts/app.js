@@ -37,7 +37,6 @@ $(document).ready(function(){
                 setTimeout(function () {
                     $("#incorrect").hide();
                     canvas.erase();
-                    user_prompt = promptUser(char_gen);
                 }, 1500);
             }
         }
