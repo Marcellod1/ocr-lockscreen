@@ -118,9 +118,11 @@ $(document).ready(function(){
         $("#phone-lock-screen").css("z-index", "1");
         $("#phone-border").css("z-index", "2");
 
+        var height = $("#phone-lock-screen").css("height");
+
         // Queue up animations
-        $("#phone-lock-screen").animate({bottom: '+=500px'}, "easeOutCirc");
-        $("#phone-lock-screen").animate({bottom: '-=500px'}, "easeOutCirc");
+        $("#phone-lock-screen").animate({bottom: "+=" + height }, "easeOutCirc");
+        $("#phone-lock-screen").animate({bottom: "-=" + height }, "easeOutCirc");
 
         // Wait for animations to complete then reset the state
         $("#phone-lock-screen").promise().done(function(){
